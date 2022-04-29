@@ -1,2 +1,5 @@
 # raermod
-my functions
+
+to be done, hopefully in the near future!
+
+R functions for Aermod
