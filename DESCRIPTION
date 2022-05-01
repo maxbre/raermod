@@ -17,4 +17,8 @@ Imports:
     vroom,
     purrr,
     rfunctions,
-    tibble
+    tibble,
+    raster,
+    mapview,
+    tidyr,
+    RColorBrewer

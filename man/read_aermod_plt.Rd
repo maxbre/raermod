@@ -9,16 +9,11 @@ read_aermod_plt(plt, skip = 6)
 \arguments{
 \item{plt}{a string path to the AERMOD.PLT file}
 
-\item{skip}{number of rows to skip, leave as default}
+\item{skip}{number of rows to skip, leave it as default = 6}
 }
 \value{
 an object of type tibble
 }
 \description{
 Returns a tibble of the output file AERMOD.PLT
-}
-\examples{
-\dontrun{
-read_aermod_plt('./AERMOD.PLT')
-}
 }
