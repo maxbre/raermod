@@ -18,22 +18,24 @@ stats_aermod_plt<- function(plt,
   tbl<-read_aermod_plt(plt)
 
   # index for min concentration
-  i_min<-which.min(tbl$CONC)
+  i_min<-which.min(tbl$average_conc)
   # value of min concentration
-  c_min <- min(tbl$CONC)
-  #c_min <- tbl$CONC[i_min]
+  c_min <- min(tbl$average_conc)
+  #c_min <- tbl$average_conc[i_min]
+
   # x, y coordinates at min
-  x_min <- tbl$X[i_min]
-  y_min <- tbl$Y[i_min]
+  x_min <- tbl$x[i_min]
+  y_min <- tbl$y[i_min]
 
   # index for max concentration
-  i_max<-which.max(tbl$CONC)
+  i_max<-which.max(tbl$average_conc)
   # value of max concentration
-  c_max <- max(tbl$CONC)
-  #c_max <- tbl$CONC[i_max]
+  c_max <- max(tbl$average_conc)
+  #c_max <- tbl$average_conc[i_max]
+
   # x, y coordinates at max
-  x_max <- tbl$X[i_max]
-  y_max <- tbl$Y[i_max]
+  x_max <- tbl$x[i_max]
+  y_max <- tbl$y[i_max]
 
   # linear distance of min concentration from the source
   d_min <-sqrt((x_source - x_min)^2+(y_source - y_min)^2)
@@ -68,15 +70,15 @@ stats_aermod_plt<- function(plt,
 
 
   #(x_max - x_source)
-  #(y_max - x_source)
-  #deg<-car2deg((x_max - x_source), (y_max - x_source))
+  #(y_max - y_source)
+  #deg<-car2deg((x_max - x_source), (y_max - y_source))
 
   deg_N_max<-rfunctions::car2deg_N((x_max - x_source), (y_max - y_source))
   deg_N_min<-rfunctions::car2deg_N((x_min - x_source), (y_min - y_source))
 
-  #round(c(x_max, y_max, c_max, d_max, deg, deg_N),2)
-  tib_max<-tibble::tibble(STAT="MAX", X=x_max, Y=y_max, CONC=c_max, DIST=d_max, DEG_N=deg_N_max)
-  tib_min<-tibble::tibble(STAT="MIN", X=x_min, Y=y_min, CONC=c_min, DIST=d_min, DEG_N=deg_N_min)
+  # calculate stat
+  tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max, conc_value = c_max, dist = d_max, deg_N = deg_N_max)
+  tib_min<-tibble::tibble(stat = "min", x_coord = x_min, y_coord = y_min, conc_value = c_min, dist = d_min, deg_N = deg_N_min)
 
   dplyr::bind_rows(tib_max, tib_min)
 

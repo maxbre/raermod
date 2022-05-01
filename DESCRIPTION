@@ -16,4 +16,5 @@ Imports:
     stringr,
     vroom,
     purrr,
-    rfunctions
+    rfunctions,
+    tibble

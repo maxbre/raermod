@@ -19,8 +19,3 @@ a tibble with x and y coordinates, concentration values, distances from the sour
 \description{
 Get some relevant statistics for AERMOD PLT output file
 }
-\examples{
-\dontrun{
-
-}
-}
