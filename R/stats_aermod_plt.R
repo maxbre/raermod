@@ -1,6 +1,6 @@
 #' Statistics about AERMOD.PLT output file
 #'
-#' Get some relevant statistics for the AERMOD.PLT output file from a given reference point (a source emission)
+#' Get relevant statistics for the AERMOD.PLT output file from a given reference point (a source emission)
 #'
 #' @param plt string, path to the AERMOD.PLT file
 #' @param x_source numeric, x coordinate of a given reference point (a source emission point)
