@@ -1,4 +1,4 @@
-#' Plot AERMOD.PLT output file
+#' Plot AERMOD.PLT output file in mapview
 #'
 #' Create mapview object from AERMOD.PLT file and export as html and png files
 #'

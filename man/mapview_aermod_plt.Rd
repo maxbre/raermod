@@ -2,7 +2,7 @@
 % Please edit documentation in R/mapview_aermod_plt.R
 \name{mapview_aermod_plt}
 \alias{mapview_aermod_plt}
-\title{Plot AERMOD.PLT output file}
+\title{Plot AERMOD.PLT output file in mapview}
 \usage{
 mapview_aermod_plt(
   plt,

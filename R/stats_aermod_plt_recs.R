@@ -1,4 +1,4 @@
-#' Statistics about discrete receptors in AERMOD.PLT output file
+#' Statistics about AERMOD.PLT output file discrete receptors
 #'
 #' Get relevant statistics for discrete receptors in AERMOD.PLT output file
 #'

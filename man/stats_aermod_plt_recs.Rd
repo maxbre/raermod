@@ -2,7 +2,7 @@
 % Please edit documentation in R/stats_aermod_plt_recs.R
 \name{stats_aermod_plt_recs}
 \alias{stats_aermod_plt_recs}
-\title{Statistics about discrete receptors in AERMOD.PLT output file}
+\title{Statistics about AERMOD.PLT output file discrete receptors}
 \usage{
 stats_aermod_plt_recs(plt)
 }
