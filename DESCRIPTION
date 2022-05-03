@@ -2,8 +2,7 @@ Package: raermod
 Title: R functions for AERMOD
 Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("massimo", "bressan", , "massimo.bressan@arpa.veneto.it", role = c("aut", "cre"))
 Description: A collection of my handy R functions for post-processing the output of AERMOD modeling system.
 License: MIT + file LICENSE
 Encoding: UTF-8
