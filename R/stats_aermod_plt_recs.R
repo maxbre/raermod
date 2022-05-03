@@ -7,7 +7,7 @@
 #' @export
 #'
 
-stat_aermod_plt_recs <- function(plt){
+stats_aermod_plt_recs <- function(plt){
 
   net_id <- x <- y <- average_conc <- date_conc_ <- NULL
 

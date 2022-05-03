@@ -3,6 +3,6 @@
 export("%>%")
 export(mapview_aermod_plt)
 export(read_aermod_plt)
-export(stat_aermod_plt_recs)
 export(stats_aermod_plt)
+export(stats_aermod_plt_recs)
 importFrom(magrittr,"%>%")
