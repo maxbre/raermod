@@ -1,6 +1,6 @@
 #' Plot AERMOD.PLT output file
 #'
-#' Create a mapview object from AERMOD.PLT file and export as html and png files
+#' Create mapview object from AERMOD.PLT file and export as html and png files
 #'
 #' @param plt string ,path to the AERMOD plt file
 #' @param epsg number, epsg to set crs in the raster object, default epsg 32632
