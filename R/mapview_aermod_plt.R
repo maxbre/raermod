@@ -1,4 +1,4 @@
-#' mapview_aermod_plt
+#' Plot AERMOD.PLT output file
 #'
 #' Create a mapview object from AERMOD.PLT file and export as html and png files
 #'
