@@ -2,7 +2,7 @@
 % Please edit documentation in R/mapview_aermod_plt.R
 \name{mapview_aermod_plt}
 \alias{mapview_aermod_plt}
-\title{mapview_aermod_plt}
+\title{Plot AERMOD.PLT output file}
 \usage{
 mapview_aermod_plt(
   plt,
@@ -27,5 +27,5 @@ mapview_aermod_plt(
 mapview object exported as html and png files
 }
 \description{
-Create a mapview object from AERMOD.PLT file and export as html and png files
+Create mapview object from AERMOD.PLT file and export as html and png files
 }
