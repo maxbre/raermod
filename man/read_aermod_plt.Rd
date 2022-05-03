@@ -4,12 +4,10 @@
 \alias{read_aermod_plt}
 \title{Read AERMOD.PLT output files as a tabular data}
 \usage{
-read_aermod_plt(plt, skip = 6)
+read_aermod_plt(plt)
 }
 \arguments{
-\item{plt}{a string path to the AERMOD.PLT file}
-
-\item{skip}{number of rows to skip, leave it as default = 6}
+\item{plt}{string, path to the AERMOD.PLT file}
 }
 \value{
 an object of type tibble

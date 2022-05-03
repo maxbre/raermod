@@ -9,22 +9,19 @@ mapview_aermod_plt(
   name_of_map_layer = "mapview_layer_name",
   string_filename = "export_filename",
   epsg = 32632,
-  skip = 6,
   trans_factor = 1
 )
 }
 \arguments{
-\item{plt}{string path to the AERMOD plt file}
+\item{plt}{string ,path to the AERMOD plt file}
 
-\item{name_of_map_layer}{string to name the mapview layer}
+\item{name_of_map_layer}{string, name of the mapview layer}
 
-\item{string_filename}{string to name the output files}
+\item{string_filename}{string,  name of the output files}
 
-\item{epsg}{number epsg to set crs in the raster object, default epsg 32632}
+\item{epsg}{number, epsg to set crs in the raster object, default epsg 32632}
 
-\item{skip}{number of rows to skip, leave it as default = 6}
-
-\item{trans_factor}{trasformation factor to be applied to values, leave it as default = 1}
+\item{trans_factor}{number, transformation factor to be applied to calculated values, leave it as default = 1}
 }
 \value{
 mapview object exported as html and png files

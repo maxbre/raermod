@@ -2,21 +2,20 @@
 #'
 #' Create a mapview object from AERMOD.PLT file and export as html and png files
 #'
-#' @param plt string path to the AERMOD plt file
-#' @param epsg number epsg to set crs in the raster object, default epsg 32632
-#' @param name_of_map_layer string to name the mapview layer
-#' @param string_filename string to name the output files
-#' @param skip number of rows to skip, leave it as default = 6
-#' @param trans_factor trasformation factor to be applied to values, leave it as default = 1
+#' @param plt string ,path to the AERMOD plt file
+#' @param epsg number, epsg to set crs in the raster object, default epsg 32632
+#' @param name_of_map_layer string, name of the mapview layer
+#' @param string_filename string,  name of the output files
+#' @param trans_factor number, transformation factor to be applied to calculated values, leave it as default = 1
 #' @return mapview object exported as html and png files
 #' @export
 
-mapview_aermod_plt<-function(plt, name_of_map_layer = 'mapview_layer_name', string_filename = 'export_filename', epsg = 32632, skip = 6,  trans_factor = 1){
+mapview_aermod_plt<-function(plt, name_of_map_layer = 'mapview_layer_name', string_filename = 'export_filename', epsg = 32632,  trans_factor = 1){
 
   net_id <- x <- y <- average_conc <- NULL
 
   # call read_aremod_plt
-  tbl <- read_aermod_plt(plt, skip = skip)
+  tbl <- read_aermod_plt(plt)
 
   # select data, just grid receptors, remove rows corresponding to discrete receptors, where "net_id" is NA
   tbl <- tbl %>%

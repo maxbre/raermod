@@ -1,41 +1,42 @@
-#' Statistics about AERMOD PLT output file
+#' Statistics about AERMOD.PLT output file
 #'
-#' Get some relevant statistics for AERMOD PLT output file
+#' Get some relevant statistics for the AERMOD.PLT output file from a given reference point (a source emission)
 #'
-#' @param plt string for the aermod plt file
-#' @param x_source numeric, x coordinate of the point source (or the centre or any other point of the domain)
-#' @param y_source numeric, y coordinate of the point source (or the centre or any other point of the domain)
-#'
-#' @return a tibble with x and y coordinates, concentration values, distances from the source, compass degrees from the North corresponding to min and max statistics
+#' @param plt string, path to the AERMOD.PLT file
+#' @param x_source numeric, x coordinate of a given reference point (a source emission point)
+#' @param y_source numeric, y coordinate of a given reference point (a source emission point)
+#' @return a tibble with: x and y coordinates, concentration values, distances from the reference point (a source emission), compass degrees from the North, the date expressed in the form 'yyyyjjjh', and the 'net id' corresponding to min and max statistics
 #' @export
 
 
-stats_aermod_plt<- function(plt,
-                          x_source,
-                          y_source){
+stats_aermod_plt<- function(plt, x_source, y_source){
 
   # read tbl data (call user function)
   tbl<-read_aermod_plt(plt)
 
-  # index for min concentration
+  # index for min concentration value
   i_min<-which.min(tbl$average_conc)
   # value of min concentration
   c_min <- min(tbl$average_conc)
   #c_min <- tbl$average_conc[i_min]
 
-  # x, y coordinates at min
+  # x, y coordinates and date corresponding at min value
   x_min <- tbl$x[i_min]
   y_min <- tbl$y[i_min]
+  date_min <- tbl$date_conc_[i_min]
+  net_min <- tbl$net_id[i_min]
 
-  # index for max concentration
+  # index for max concentration value
   i_max<-which.max(tbl$average_conc)
   # value of max concentration
   c_max <- max(tbl$average_conc)
   #c_max <- tbl$average_conc[i_max]
 
-  # x, y coordinates at max
+  # x, y coordinates date corresponding at max value
   x_max <- tbl$x[i_max]
   y_max <- tbl$y[i_max]
+  date_max <- tbl$date_conc_[i_max]
+  net_max <- tbl$net_id[i_max]
 
   # linear distance of min concentration from the source
   d_min <-sqrt((x_source - x_min)^2+(y_source - y_min)^2)
@@ -76,10 +77,17 @@ stats_aermod_plt<- function(plt,
   deg_N_max<-rfunctions::car2deg_N((x_max - x_source), (y_max - y_source))
   deg_N_min<-rfunctions::car2deg_N((x_min - x_source), (y_min - y_source))
 
-  # calculate stat
-  tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max, conc_value = c_max, dist = d_max, deg_N = deg_N_max)
-  tib_min<-tibble::tibble(stat = "min", x_coord = x_min, y_coord = y_min, conc_value = c_min, dist = d_min, deg_N = deg_N_min)
+  # calculate relevant statistics
+  tib_min<-tibble::tibble(stat = "min", x_coord = x_min, y_coord = y_min,
+                          conc_value = c_min, dist = d_min,
+                          deg_N = deg_N_min, date = date_max,
+                          net_id = net_min)
 
-  dplyr::bind_rows(tib_max, tib_min)
+  tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max,
+                          conc_value = c_max, dist = d_max,
+                          deg_N = deg_N_max, date = date_min,
+                          net_id = net_max)
+
+  dplyr::bind_rows(tib_min, tib_max)
 
   }

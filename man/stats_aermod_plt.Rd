@@ -2,20 +2,20 @@
 % Please edit documentation in R/stats_aermod_plt.R
 \name{stats_aermod_plt}
 \alias{stats_aermod_plt}
-\title{Statistics about AERMOD PLT output file}
+\title{Statistics about AERMOD.PLT output file}
 \usage{
 stats_aermod_plt(plt, x_source, y_source)
 }
 \arguments{
-\item{plt}{string for the aermod plt file}
+\item{plt}{string, path to the AERMOD.PLT file}
 
-\item{x_source}{numeric, x coordinate of the point source (or the centre or any other point of the domain)}
+\item{x_source}{numeric, x coordinate of a given reference point (a source emission point)}
 
-\item{y_source}{numeric, y coordinate of the point source (or the centre or any other point of the domain)}
+\item{y_source}{numeric, y coordinate of a given reference point (a source emission point)}
 }
 \value{
-a tibble with x and y coordinates, concentration values, distances from the source, compass degrees from the North corresponding to min and max statistics
+a tibble with: x and y coordinates, concentration values, distances from the reference point (a source emission), compass degrees from the North, the date expressed in the form 'yyyyjjjh', and the 'net id' corresponding to min and max statistics
 }
 \description{
-Get some relevant statistics for AERMOD PLT output file
+Get some relevant statistics for the AERMOD.PLT output file from a given reference point (a source emission)
 }
