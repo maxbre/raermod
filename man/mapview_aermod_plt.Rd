@@ -6,20 +6,27 @@
 \usage{
 mapview_aermod_plt(
   plt,
+  epsg = 32632,
+  at = NULL,
+  export = FALSE,
   name_of_map_layer = "mapview_layer_name",
   string_filename = "export_filename",
-  epsg = 32632,
   trans_factor = 1
 )
 }
 \arguments{
-\item{plt}{string ,path to the AERMOD plt file}
+\item{plt}{string, path to the AERMOD.PLT file}
+
+\item{epsg}{number, epsg to set crs in the raster object, default epsg 32632}
+
+\item{at}{numeric vector defining breakpoints for the visualization,
+default value is NULL by using continuous 'pretty' breakpoints, see lattice::levelplot function for details}
+
+\item{export}{logical, export mapview object as hmtl and png files? The default value is equal to FALSE}
 
 \item{name_of_map_layer}{string, name of the mapview layer}
 
 \item{string_filename}{string,  name of the output files}
-
-\item{epsg}{number, epsg to set crs in the raster object, default epsg 32632}
 
 \item{trans_factor}{number, transformation factor to be applied to calculated values, leave it as default = 1}
 }
