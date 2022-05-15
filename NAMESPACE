@@ -2,6 +2,7 @@
 
 export("%>%")
 export(mapview_aermod_plt)
+export(mapview_aermod_plt_contour)
 export(read_aermod_plt)
 export(stats_aermod_plt)
 export(stats_aermod_plt_recs)
