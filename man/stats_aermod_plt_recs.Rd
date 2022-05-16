@@ -10,7 +10,7 @@ stats_aermod_plt_recs(plt)
 \item{plt}{string, path to the AERMOD.PLT file}
 }
 \value{
-tibble with: net_id, x and y coordinates, average concentration value, date expressed in the form 'yyyyjjjh'
+tibble with: net_id, x and y coordinates, average concentration value, date expressed in the form 'yymmddhh'
 }
 \description{
 Get relevant statistics for discrete receptors in AERMOD.PLT output file
