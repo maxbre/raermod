@@ -51,8 +51,7 @@ mapview_aermod_plt<-function(plt,
                           na.color ='transparent',
                           alpha.region = 0.5,
                           legend.opacity = 0.5,
-                          layer.name = name_of_map_layer,
-                          verbose = FALSE)
+                          layer.name = name_of_map_layer)
 
   # eventually export the map to hml and png
   if(export) rfunctions::export_mapview(map, string_filename)
