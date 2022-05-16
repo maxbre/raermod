@@ -49,9 +49,10 @@ mapview_aermod_plt<-function(plt,
                           # here eventually define the binning
                           at = at,
                           na.color ='transparent',
-                          alpha.region= 0.5,
-                          legend.opacity=0.5,
-                          layer.name = name_of_map_layer)
+                          alpha.region = 0.5,
+                          legend.opacity = 0.5,
+                          layer.name = name_of_map_layer,
+                          verbose = FALSE)
 
   # eventually export the map to hml and png
   if(export) rfunctions::export_mapview(map, string_filename)
