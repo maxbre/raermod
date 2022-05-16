@@ -3,7 +3,7 @@
 #' Get relevant statistics for discrete receptors in AERMOD.PLT output file
 #'
 #' @param plt string, path to the AERMOD.PLT file
-#' @return tibble with: net_id, x and y coordinates, average concentration value, date expressed in the form 'yyyyjjjh'
+#' @return tibble with: net_id, x and y coordinates, average concentration value, date expressed in the form 'yymmddhh'
 #' @export
 #'
 

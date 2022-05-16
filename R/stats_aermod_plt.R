@@ -5,7 +5,7 @@
 #' @param plt string, path to the AERMOD.PLT file
 #' @param x_source numeric, x coordinate of a given reference point (a source emission point)
 #' @param y_source numeric, y coordinate of a given reference point (a source emission point)
-#' @return tibble with: x and y coordinates, concentration values, distances from the reference point (a source emission), compass degrees from the North, the date expressed in the form 'yyyyjjjh', and the 'net id' corresponding to min and max statistics
+#' @return tibble with: x and y coordinates, concentration values, distances from the reference point (a source emission), compass degrees from the North, the date expressed in the form 'yymmddhh', and the 'net id' corresponding to min and max statistics
 #' @export
 
 
