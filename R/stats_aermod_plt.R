@@ -24,7 +24,7 @@ stats_aermod_plt<- function(plt, x_source, y_source){
   x_min <- tbl$x[i_min]
   y_min <- tbl$y[i_min]
   # this is for the case of annual average
-  date_min <- "---"
+  date_min <- NA
   if("date_conc_" %in% colnames(tbl)) date_min <- tbl$date_conc_[i_min]
   net_min <- tbl$net_id[i_min]
 
@@ -38,7 +38,7 @@ stats_aermod_plt<- function(plt, x_source, y_source){
   x_max <- tbl$x[i_max]
   y_max <- tbl$y[i_max]
   # this is for the case of annual average
-  date_max <- "---"
+  date_max <- NA
   if("date_conc_" %in% colnames(tbl)) date_max <- tbl$date_conc_[i_max]
   net_max <- tbl$net_id[i_max]
 
