@@ -22,6 +22,10 @@ mapview_aermod_plt_contour <- function(plt,
 
   net_id <- x <- y <- average_conc <- NULL
 
+  # this is for getting rid of mapview warning, not to worry about
+  # https://github.com/r-spatial/mapview/issues/422
+  options(rgdal_show_exportToProj4_warnings = "none")
+
   # call read_aremod_plt
   tbl <- read_aermod_plt(plt)
 
