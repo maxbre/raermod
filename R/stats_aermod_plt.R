@@ -81,15 +81,28 @@ stats_aermod_plt<- function(plt, x_source, y_source){
   deg_N_max<-rfunctions::car2deg_N((x_max - x_source), (y_max - y_source))
   deg_N_min<-rfunctions::car2deg_N((x_min - x_source), (y_min - y_source))
 
+  sect_max <- rfunctions::wind_degr_to_sect(deg_N_max)
+  sect_min <- rfunctions::wind_degr_to_sect(deg_N_min)
+
   # calculate relevant statistics
-  tib_min<-tibble::tibble(stat = "min", x_coord = x_min, y_coord = y_min,
-                          conc_value = c_min, dist = d_min,
-                          deg_N = deg_N_min, date = date_min,
+  tib_min<-tibble::tibble(stat = "min",
+                          x_coord = x_min,
+                          y_coord = y_min,
+                          conc_value = c_min,
+                          dist = d_min,
+                          deg_N = deg_N_min,
+                          wind_sect = sect_min,
+                          date = date_min,
                           net_id = net_min)
 
-  tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max,
-                          conc_value = c_max, dist = d_max,
-                          deg_N = deg_N_max, date = date_max,
+  tib_max<-tibble::tibble(stat = "max",
+                          x_coord = x_max,
+                          y_coord = y_max,
+                          conc_value = c_max,
+                          dist = d_max,
+                          deg_N = deg_N_max,
+                          wind_sect = sect_max,
+                          date = date_max,
                           net_id = net_max)
 
   dplyr::bind_rows(tib_min, tib_max)
