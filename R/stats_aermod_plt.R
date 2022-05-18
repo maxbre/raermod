@@ -85,7 +85,7 @@ stats_aermod_plt<- function(plt, x_source, y_source){
 
   tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max,
                           conc_value = c_max, dist = d_max,
-                          deg_N = deg_N_max, date = date_min,
+                          deg_N = deg_N_max, date = date_max,
                           net_id = net_max)
 
   dplyr::bind_rows(tib_min, tib_max)
