@@ -80,7 +80,7 @@ stats_aermod_plt<- function(plt, x_source, y_source){
   # calculate relevant statistics
   tib_min<-tibble::tibble(stat = "min", x_coord = x_min, y_coord = y_min,
                           conc_value = c_min, dist = d_min,
-                          deg_N = deg_N_min, date = date_max,
+                          deg_N = deg_N_min, date = date_min,
                           net_id = net_min)
 
   tib_max<-tibble::tibble(stat = "max", x_coord = x_max, y_coord = y_max,
