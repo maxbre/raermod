@@ -49,15 +49,15 @@ mapview_aermod_plt_contour <- function(plt,
     # use default of contour line
     r<-raster::rasterToContour(r)
 
-    # need to sort the factor levels of the spatialLinesDataFRame
-    r@data$level<-factor(r@data$level,
-                           as.character(sort(as.numeric(r@data$level))))
-  } else {
+    } else {
 
-    # here it is not necessary to sort the factor levels, not completely understand that...
+    # apply user defined levels
     r<-raster::rasterToContour(r, levels=levels)
 
   }
+
+  # sort the factor levels of the spatialLinesDataFRame
+  r@data$level<-factor(r@data$level, sort(as.numeric(r@data$level)))
 
   # mapview
   map <- mapview::mapview(r,
