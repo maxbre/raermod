@@ -20,4 +20,8 @@ Imports:
     raster,
     mapview,
     tidyr,
-    RColorBrewer
+    RColorBrewer,
+    geosphere,
+    sp,
+    units,
+    sf
