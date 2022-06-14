@@ -10,6 +10,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
 Remotes:
     maxbre/rfunctions
+Depends:
+    R (>= 3.2)
 Imports: 
     magrittr,
     dplyr,
