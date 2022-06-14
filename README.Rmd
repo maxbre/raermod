@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 [![](https://img.shields.io/badge/devel%20version-0.0.1-blue.svg)](https://github.com/maxbre/raermod)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![](https://img.shields.io/github/languages/code-size/maxbre/raermod.svg)](https://github.com/maxbre/raermod)
+[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 <!-- badges: end -->
 
 
